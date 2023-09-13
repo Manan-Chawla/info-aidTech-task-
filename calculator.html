@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+       body {
+            background-image: url('pexels-eberhard-grossgasteiger-1287142.jpg');
+            background-size: cover; 
+            background-position: center; 
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        .one {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 200;
+        }
+        
+        .calculator-container 
+        {
+            text-align: center; 
+        }
+        .calculator-container input[type="button"] 
+        {
+           
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            font-size: 18px; 
+            border: none;
+            border-radius: 5px; 
+            background-color: #3498db; 
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+    <p>----------------------------------------------------------------------------------------</p>
+    <h1>Simple Calc</h1>
+    <form name="calculator"class="calculator-container">
+        <input type="text" name="display" id="display" readonly>
+        <br>
+        <input type="button" value="1" onclick="calculator.display.value += '1'">
+        <input type="button" value="2" onclick="calculator.display.value += '2'">
+        <input type="button" value="3" onclick="calculator.display.value += '3'">
+        <input type="button" value="+" onclick="calculator.display.value += '+'">
+        <br>
+        <input type="button" value="4" onclick="calculator.display.value += '4'">
+        <input type="button" value="5" onclick="calculator.display.value += '5'">
+        <input type="button" value="6" onclick="calculator.display.value += '6'">
+        <input type="button" value="-" onclick="calculator.display.value += '-'">
+        <br>
+        <input type="button" value="7" onclick="calculator.display.value += '7'">
+        <input type="button" value="8" onclick="calculator.display.value += '8'">
+        <input type="button" value="9" onclick="calculator.display.value += '9'">
+        <input type="button" value="*" onclick="calculator.display.value += '*'">
+        <br>
+        <input type="button" value="C" onclick="calculator.display.value = ''">
+        <input type="button" value="0" onclick="calculator.display.value += '0'">
+        <input type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+        <input type="button" value="/" onclick="calculator.display.value += '/'">
+        <br>
+    </form>
+    <center><h2>CREATED BY MANAN CHAWLA </h2></center>
+    <p>----------------------------------------------------------------------------------------</p>
+    </div>
+</body>
+</html>
