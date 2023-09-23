@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            background-image: url('background.jpeg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            color: white; 
+        }
+        
+        form {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        
+        label {
+            font-size: 18px;
+            color: white;
+        }
+
+        
+        input[type="number"] {
+            font-size: 18px;
+            color: white;
+        }
+
+        
+        h1 {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+   
+    <form name="tempConverter">
+        <label for="celsius">Celsius:</label>
+        <input type="number" id="celsius" name="celsius" placeholder="Enter Celsius temperature" oninput="convertTemperature()">
+        <br>
+        <label for="fahrenheit">Fahrenheit:</label>
+        <input type="number" id="fahrenheit" name="fahrenheit" placeholder="Enter Fahrenheit temperature" oninput="convertTemperature()">
+    </form>
+    
+    <script>
+        function convertTemperature() {
+            var celsius = parseFloat(document.getElementById("celsius").value);
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("fahrenheit").value = fahrenheit.toFixed(2);
+            
+            var fahValue = parseFloat(document.getElementById("fahrenheit").value);
+            var celsiusValue = (fahValue - 32) * 5/9;
+            document.getElementById("celsius").value = celsiusValue.toFixed(2);
+        }
+    </script>
+  
+</body>
+</html>
